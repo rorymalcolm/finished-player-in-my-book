@@ -16,6 +16,7 @@ const Home: NextPage = () => {
   function prunoPernandesifyText(text: string): string {
     return text
       .split(/\s/)
+      .filter((char) => char !== " ")
       .map(
         (word) =>
           `${isUpperCase(word.charAt(0)) ? "P" : "p"}${word.substring(
